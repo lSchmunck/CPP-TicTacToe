@@ -54,11 +54,10 @@ void TicTacToe::TakeTurn()
 
 
 	int index = position - 1;
-	int row = index / 3;
-	int col = index % 3;
+	
 
 
-	if (!IsValidMove(row, col))
+	if (!IsValidMove(index))
 	{
 		std::cout << "Nope! Position already taken! Try again!\n";
 		return;
@@ -107,8 +106,8 @@ bool TicTacToe::CheckDraw() const
 
 
 
-bool TicTacToe::IsValidMove(int row, int col) const
+bool TicTacToe::IsValidMove(int index) const
 {
-	int index = row * 3 + col;
+	//int index = row * 3 + col;
 	return m_board[index] != 'X' && m_board[index] != 'O';
 }

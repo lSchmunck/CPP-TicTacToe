@@ -11,7 +11,7 @@ private:
 
 	bool CheckWin() const;
 	bool CheckDraw() const;
-	bool IsValidMove(int row, int col) const;
+	bool IsValidMove(int index) const;
 
 public:
 	TicTacToe();
